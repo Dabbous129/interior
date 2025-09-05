@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Studio Nova — Interior Design (v4)</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Studio Nova home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="Studio Nova logo">
+  <defs>
+    <linearGradient id="gA" x1="0" x2="1">
+      <stop offset="0" stop-color="#09a39a"/>
+      <stop offset="1" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(8,8)" filter="url(#glow)">
+    <path id="house" d="M20 36 L44 12 L68 36 V64 H20 Z" fill="none" stroke="url(#gA)" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="30" cy="46" r="6" fill="#09a39a" opacity="0.95"/>
+    <polygon points="52,44 62,58 42,58" fill="#ff6b6b" opacity="0.95"/>
+  </g>
+  <g transform="translate(96,30)">
+    <text x="0" y="6" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="20" fill="#0f2a2a">Studio Nova</text>
+    <text x="0" y="26" font-family="Playfair Display, Georgia, serif" font-size="11" fill="#5f6b6b">Interior Design</text>
+  </g>
+</svg>
+</a>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button id="modeToggle" class="mode-toggle" aria-pressed="false" title="Toggle dark mode">🌗</button>
+      </div>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <div class="ribbon" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="panel">
+          <h1 class="hero-title">Portfolio</h1>
+          <p class="lead">We design modern, expressive interiors with a playful creative edge. Bold ideas — expertly executed.</p>
+          <div style="margin-top:18px;display:flex;gap:12px"><button class="btn btn--primary">View portfolio</button><button class="btn btn--secondary">Get in touch</button></div>
+          <div class="cards" style="margin-top:22px">
+            <div class="card"><strong>Concept</strong><p style="color:var(--muted)">Moodboards & branding</p></div>
+            <div class="card"><strong>Design</strong><p style="color:var(--muted)">Layouts, lighting & finishes</p></div>
+            <div class="card"><strong>Delivery</strong><p style="color:var(--muted)">Procurement & management</p></div>
+          </div>
+        </div>
+        <div class="hero-visual panel"><img src="assets/hero.svg" alt="Abstract interior illustration" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <h2>Selected Projects</h2>
+      <div class="filter-bar" role="toolbar" aria-label="Filter projects">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="living">Living</button>
+        <button class="filter-btn" data-cat="kitchen">Kitchen</button>
+        <button class="filter-btn" data-cat="bedroom">Bedroom</button>
+      </div>
+      <div class="portfolio-grid" aria-hidden="false">
+        <a class="item w3" data-cat="living"><img src="assets/portfolio1.svg" alt="Project 1"><div class="overlay"><div class="title">Cozy Family Home</div></div></a>
+        <a class="item w2 h2" data-cat="kitchen"><img src="assets/portfolio2.svg" alt="Project 2"><div class="overlay"><div class="title">Minimal Kitchen</div></div></a>
+        <a class="item" data-cat="bedroom"><img src="assets/portfolio3.svg" alt="Project 3"><div class="overlay"><div class="title">Scandinavian Bedroom</div></div></a>
+        <a class="item w2" data-cat="living"><img src="assets/portfolio4.svg" alt="Project 4"><div class="overlay"><div class="title">Boutique Office</div></div></a>
+        <a class="item" data-cat="kitchen"><img src="assets/portfolio5.svg" alt="Project 5"><div class="overlay"><div class="title">Flagship Retail</div></div></a>
+        <a class="item h2" data-cat="bedroom"><img src="assets/portfolio6.svg" alt="Project 6"><div class="overlay"><div class="title">Hotel Lobby</div></div></a>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <h2>Testimonials</h2>
+      <div class="test-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px">
+        <blockquote class="card">"Creative, professional and delightful — delivered beyond expectations."<footer>— Lina H.</footer></blockquote>
+        <blockquote class="card">"An office revamp that helped our brand stand out." <footer>— Omar R.</footer></blockquote>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <h2>Contact</h2>
+      <form id="contactForm" class="contact-form" action="#" novalidate>
+        <div class="form-row"><input id="name" name="name" type="text" placeholder=" " required><label for="name">Full name</label></div>
+        <div class="form-row"><input id="email" name="email" type="email" placeholder=" " required><label for="email">Email</label></div>
+        <div class="form-row"><input id="phone" name="phone" type="tel" placeholder=" "><label for="phone">Phone (optional)</label></div>
+        <div class="form-row"><textarea id="message" name="message" rows="5" placeholder=" " required></textarea><label for="message">Tell us about the project</label></div>
+        <div style="display:flex;gap:12px"><button class="btn btn--primary" type="submit">Send message</button><button class="btn btn--ghost" type="reset">Reset</button></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- lightbox -->
+  <div class="lightbox" role="dialog" aria-hidden="true"><div class="content" tabindex="-1"><button class="lb-close" aria-label="Close">✕</button><img src="" alt=""></div></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="Studio Nova logo">
+  <defs>
+    <linearGradient id="gA" x1="0" x2="1">
+      <stop offset="0" stop-color="#09a39a"/>
+      <stop offset="1" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(8,8)" filter="url(#glow)">
+    <path id="house" d="M20 36 L44 12 L68 36 V64 H20 Z" fill="none" stroke="url(#gA)" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="30" cy="46" r="6" fill="#09a39a" opacity="0.95"/>
+    <polygon points="52,44 62,58 42,58" fill="#ff6b6b" opacity="0.95"/>
+  </g>
+  <g transform="translate(96,30)">
+    <text x="0" y="6" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="20" fill="#0f2a2a">Studio Nova</text>
+    <text x="0" y="26" font-family="Playfair Display, Georgia, serif" font-size="11" fill="#5f6b6b">Interior Design</text>
+  </g>
+</svg>
+</div>
+      <nav class="footer-nav" aria-label="Footer nav"><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+      <div style="min-width:220px;text-align:right"><div>📧 hello@studionova.example</div><div>📞 +961 70 000 000</div></div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

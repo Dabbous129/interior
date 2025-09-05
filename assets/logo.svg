@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="Studio Nova logo">
+  <defs>
+    <linearGradient id="gA" x1="0" x2="1">
+      <stop offset="0" stop-color="#09a39a"/>
+      <stop offset="1" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(8,8)" filter="url(#glow)">
+    <path id="house" d="M20 36 L44 12 L68 36 V64 H20 Z" fill="none" stroke="url(#gA)" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="30" cy="46" r="6" fill="#09a39a" opacity="0.95"/>
+    <polygon points="52,44 62,58 42,58" fill="#ff6b6b" opacity="0.95"/>
+  </g>
+  <g transform="translate(96,30)">
+    <text x="0" y="6" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="20" fill="#0f2a2a">Studio Nova</text>
+    <text x="0" y="26" font-family="Playfair Display, Georgia, serif" font-size="11" fill="#5f6b6b">Interior Design</text>
+  </g>
+</svg>

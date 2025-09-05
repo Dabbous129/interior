@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+  <defs><linearGradient id="hg1" x1="0" x2="1"><stop offset="0" stop-color="#09a39a" stop-opacity="0.08"/><stop offset="1" stop-color="#ff6b6b" stop-opacity="0.06"/></linearGradient></defs>
+  <rect width="1200" height="700" fill="url(#hg1)"/>
+  <g transform="translate(60,60)"><rect x="0" y="100" width="980" height="480" rx="20" fill="#fff" stroke="#e9e6e4" stroke-width="1"/></g>
+</svg>
